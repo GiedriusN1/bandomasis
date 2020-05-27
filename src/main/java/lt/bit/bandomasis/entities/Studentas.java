@@ -17,9 +17,9 @@ public class Studentas {
 
     private String vardas;
     private String pavarde;
-    private String elPastoAdresas;
+    private String elPastas;
 
-    @OneToMany(mappedBy = "id.studentai" , fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "studentas" , fetch = FetchType.EAGER)
     private List<Pazymiai>pazymiai;
 
     public int getId() {
@@ -47,11 +47,11 @@ public class Studentas {
     }
 
     public String getElPastoAdresas() {
-        return elPastoAdresas;
+        return elPastas;
     }
 
     public void setElPastoAdresas(String elPastoAdresas) {
-        this.elPastoAdresas = elPastoAdresas;
+        this.elPastas = elPastas;
     }
 
     public List<Pazymiai> getPazymiai() {

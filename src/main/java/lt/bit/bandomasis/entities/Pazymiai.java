@@ -1,8 +1,6 @@
 package lt.bit.bandomasis.entities;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -12,12 +10,15 @@ public class Pazymiai {
     /**
      * Apraso duomenis lenteleje pazymiai
      */
-    @EmbeddedId
-    private int id;
-
-    private int studentasId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private LocalDate data;
     private int pazymys;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "studentas_id")
+    private Studentas studentas;
 
     public int getId() {
         return id;
@@ -27,12 +28,16 @@ public class Pazymiai {
         this.id = id;
     }
 
-    public int getStudentasId() {
-        return studentasId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setStudentasId(int studentasId) {
-        this.studentasId = studentasId;
+    public Studentas getStudentas() {
+        return studentas;
+    }
+
+    public void setStudentas(Studentas studentas) {
+        this.studentas = studentas;
     }
 
     public LocalDate getData() {
