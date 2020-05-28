@@ -1,5 +1,6 @@
 package lt.bit.bandomasis.runners;
 
+import lt.bit.bandomasis.entities.Pazymiai;
 import lt.bit.bandomasis.entities.Studentas;
 import lt.bit.bandomasis.services.StudentasService;
 import org.springframework.boot.CommandLineRunner;
@@ -18,6 +19,8 @@ import java.util.List;
  id, vardas, pavarde, el. pašto adresas, pažymiai (kolekcija (LinkedList arba ArrayList)).
  */
 
+
+
 @Component
 @Order(3)
 public class Uzduotis3 implements CommandLineRunner {
@@ -28,7 +31,7 @@ public class Uzduotis3 implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         List<Studentas> visiDuomenys = new ArrayList<>();
-        visiDuomenys = studentasService.uzkrautiDuomenis();
+        visiDuomenys = studentasService.uzkrautiDuomenis();  // kvieciame metoda uzkrautiDuomenis() is StudentasService
 
         String u1 = "  Uzduotis 3:  prisijungimas prie DB sukonfiguruotas,\n" +
                 "   klaseje StudentasService sukurtas nestatinis metodas uzkrautiDuomenis() \n";
@@ -38,10 +41,21 @@ public class Uzduotis3 implements CommandLineRunner {
         //   System.out.println(" \u001b[44m " + separator); // u001b[30;1m
         System.out.println((u1));
 
-        for(Studentas studentas : visiDuomenys) {
-            System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " + studentas.getPazymiai());
+        for (Studentas studentas : visiDuomenys) {
+            // negraziai spausdina
+                System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " + Arrays.deepToString(new List[]{studentas.getPazymiai()}));
+             //    System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " +  studentas.getPazymiai().toString());
+
+
+            System.out.println(studentas.getVardas() + " " + studentas.getPavarde());
+            for (Pazymiai pazymys : studentas.getPazymiai()) {
+                System.out.println(pazymys.getData() + " " + pazymys.getPazymys());
+            }
+
+
+          //  System.out.println("  " + visiDuomenys);
+
         }
-        System.out.println("  " + visiDuomenys);
         System.out.println(separator + "\u001b[0m");
     }
 }
