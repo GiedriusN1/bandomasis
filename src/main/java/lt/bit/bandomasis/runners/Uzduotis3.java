@@ -43,7 +43,7 @@ public class Uzduotis3 implements CommandLineRunner {
 
         for (Studentas studentas : visiDuomenys) {
             // negraziai spausdina
-                System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " + Arrays.deepToString(new List[]{studentas.getPazymiai()}));
+            //    System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " + Arrays.deepToString(new List[]{studentas.getPazymiai()}));
              //    System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " +  studentas.getPazymiai().toString());
 
 
