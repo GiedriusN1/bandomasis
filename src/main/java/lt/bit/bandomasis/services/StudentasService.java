@@ -2,6 +2,9 @@ package lt.bit.bandomasis.services;
 
 import lt.bit.bandomasis.entities.Studentas;
 import lt.bit.bandomasis.repositories.StudentasRepository;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +20,18 @@ public class StudentasService {
     @Resource
     private StudentasRepository studentasRepository;
 
-    public List<Studentas> gautiStudentusPagalMetus(int metai) {
-        List<Studentas> studentas = studentasRepository.findAll();
-        return studentas.stream()
-                .filter(std -> std.getPazymiai().stream().anyMatch(pazymys -> pazymys.getData().getYear() == metai))
-                .collect(Collectors.toList());
-    }
-// metodas gautiSurusiuotusStudentus neveikia, nes reikia kad jis butu statinis
+    // nenaudijamas metodas
+//    public List<Studentas> gautiStudentusPagalMetus(int metai) {
+//        List<Studentas> studentas = studentasRepository.findAll();
+//        return studentas.stream()
+//                .filter(std -> std.getPazymiai().stream().anyMatch(pazymys -> pazymys.getData().getYear() == metai))
+//                .collect(Collectors.toList());
+//    }
+
+
+
+
+// metodas gautiSurusiuotusStudentus neveikia, nes reikia kad jis butu statinis todel rusiuoju runneryje 4 Uzduotis
     public  List<Studentas> gautiSurusiuotusStudentus() {
         Sort pavardeSort = Sort.by("pavarde");
         Sort vardasSort = Sort.by("vardas");

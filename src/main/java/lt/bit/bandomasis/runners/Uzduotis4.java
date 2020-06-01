@@ -39,6 +39,7 @@ public class Uzduotis4 implements CommandLineRunner{
         String separator = "************************************************************************************";
         System.out.print("\u001b[30;1m"); // + separator);
         System.out.println((u1));
+        System.out.println("\u001b[0m");
 
         Sort pavardeSort = Sort.by("pavarde");
         Sort vardasSort = Sort.by("vardas");
@@ -48,6 +49,7 @@ public class Uzduotis4 implements CommandLineRunner{
 //        List<Studentas> studentai;
 //        studentai = StudentasService.gautiSurusiuotusStudentus();
 
+        System.out.print("\u001b[30;1m");
         System.out.println("Rasta studentu " + studentai.size());
         studentai.forEach(std -> System.out.println(std.getId() + " " + std.getPavarde() + " " + std.getVardas() + " " + std.getElPastoAdresas()));
 

@@ -31,24 +31,31 @@ public class Uzduotis3 implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         List<Studentas> visiDuomenys = new ArrayList<>();
+
         visiDuomenys = studentasService.uzkrautiDuomenis();  // kvieciame metoda uzkrautiDuomenis() is StudentasService
+
+        // testas su static metodu klaseje Studentas
+      //  List<Studentas> visiDuomenysStatic = new ArrayList<>();
+      //  visiDuomenysStatic = Studentas.uzkrautiDuomenisStatic();
 
         String u1 = "  Uzduotis 3:  prisijungimas prie DB sukonfiguruotas,\n" +
                 "   klaseje StudentasService sukurtas nestatinis metodas uzkrautiDuomenis() \n";
         String separator = "************************************************************************************";
-        //  TimeUnit.SECONDS.sleep(3);
-        System.out.print("\u001b[30;1m"); // + separator);
-        //   System.out.println(" \u001b[44m " + separator); // u001b[30;1m
-        System.out.println((u1));
+
+        System.out.println("\u001b[30;1m" + separator);
+      //  System.out.println("\u001b[44m" + separator);
+        System.out.println((u1)  + "\u001b[0m");
+
 
         for (Studentas studentas : visiDuomenys) {
             // negraziai spausdina
             //    System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " + Arrays.deepToString(new List[]{studentas.getPazymiai()}));
-             //    System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " +  studentas.getPazymiai().toString());
+            //    System.out.println(studentas.getVardas() + " " + studentas.getPavarde() + " " +  studentas.getPazymiai().toString());
 
 
-            System.out.println(studentas.getVardas() + " " + studentas.getPavarde());
+            System.out.println("\u001b[30;1m" + studentas.getVardas() + " " + studentas.getPavarde());
             for (Pazymiai pazymys : studentas.getPazymiai()) {
+
                 System.out.println(pazymys.getData() + " " + pazymys.getPazymys());
             }
 
@@ -57,5 +64,6 @@ public class Uzduotis3 implements CommandLineRunner {
 
         }
         System.out.println(separator + "\u001b[0m");
+
     }
 }

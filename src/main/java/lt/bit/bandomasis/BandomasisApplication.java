@@ -36,6 +36,10 @@ public class BandomasisApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BandomasisApplication.class, args);
 
+// nesiderina su Spring karkaso struktura, bet 3 uzduociai reikia statinio metodo:
+
+
+
 
 	}
 
