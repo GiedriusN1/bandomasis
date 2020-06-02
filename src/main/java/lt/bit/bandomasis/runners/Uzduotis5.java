@@ -22,7 +22,7 @@ public class Uzduotis5 implements CommandLineRunner {
      */
 
     @Resource
-    private PazymiaiRepository pazymiaiRepository;
+    private PazymiaiService pazymiaiService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -35,9 +35,12 @@ public class Uzduotis5 implements CommandLineRunner {
         System.out.println((u1));
         System.out.println(separator + "\u001b[0m");
 
-        int vid;
-        vid = PazymiaiService.kursoVidurkis();
 
+        System.out.print("\u001b[30;1m");
+
+        System.out.println("Kurso vidurkis: " +  pazymiaiService.kursoVidurkis()); // kvieciame metoda ir spausdinam ka grazino
+
+        System.out.println(separator + "\u001b[0m");
     }
 
 

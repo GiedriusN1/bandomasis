@@ -20,7 +20,7 @@ public class StudentasService {
     @Resource
     private StudentasRepository studentasRepository;
 
-    // nenaudijamas metodas
+    // nenaudojamas metodas
 //    public List<Studentas> gautiStudentusPagalMetus(int metai) {
 //        List<Studentas> studentas = studentasRepository.findAll();
 //        return studentas.stream()
