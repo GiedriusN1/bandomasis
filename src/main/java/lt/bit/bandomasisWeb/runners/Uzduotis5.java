@@ -1,16 +1,11 @@
-package lt.bit.bandomasis.runners;
+package lt.bit.bandomasisWeb.runners;
 
-import lt.bit.bandomasis.entities.Pazymiai;
-import lt.bit.bandomasis.repositories.PazymiaiRepository;
-import lt.bit.bandomasis.repositories.StudentasRepository;
-import lt.bit.bandomasis.services.PazymiaiService;
+import lt.bit.bandomasisWeb.services.PazymiaiService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Component

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Studentas</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Id</th><td th:text="${std.id}"></td>
+    </tr>
+    <tr>
+        <th>Vardas</th><td th:text="${std.vardas}"></td>
+    </tr>
+    <tr>
+        <th>Pavarde</th><td th:text="${std.pavarde}"></td>
+    </tr>
+    <tr>
+        <th>El.paštas</th><td th:text="${std.elPastas}"></td>
+    </tr>
+</table>
+
+<a th:href="@{/studentas}">Atgal į sarašą</a>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Studentai</title>
+</head>
+<body>
+<h1>TODO - Cia bus darbuotoju sarasas</h1>
+
+<pre>
+        DEBUG!!!:
+        TotalPages: <span th:text="${page.totalPages}"></span>
+        TotalElements: <span th:text="${page.totalElements}"></span>
+        Number: <span th:text="${page.number}"></span>
+        Size: <span th:text="${page.size}"></span>
+</pre>
+
+<a th:if="${page.number > 0}" th:href="@{/studentas(pageNumber=${page.number-1},pageSize=${page.size})}">Atgal</a>
+<a th:if="${page.number < page.totalPages-1}" th:href="@{/studentas(pageNumber=${page.number+1},pageSize=${page.size})}">Tolyn</a>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>vardas</td>
+        <td>pavarde</td>
+        <td>El.paštas</td>
+        <td>Veiksmas</td>
+
+    </tr>
+
+            <tr>
+                <td><a href="studentas/1">1</a></td>
+                <td>Jonas</td>
+                <td>Jonaitis</td>
+                <td>jonas@gmail.com</td>
+            </tr>
+            <tr>
+                <td><a href="studentas/2">2</a></td>
+                <td>Petras</td>
+                <td>Petraitis</td>
+                <td>petras@gmail.com</td>
+            </tr>
+
+    <!-- sarasas ateina kintamajame: page.content -->
+    <tr th:each="emp : ${page.content}">
+        <td> <a th:href="@{/studentas/{id}(id=${std.id})}"><span th:text="${std.id}"></span></a> </td>
+        <td th:text="${std.vardas}"></td>
+        <td th:text="${std.pavarde}"></td>
+        <td th:text="${std.elPastas}"></td>
+        <td>
+            <a th:href="@{/studentas/taisyti-form/{id}(id=${std.id})}"> Taisyti</a>
+            <a th:href="@{/studentas/delete-ask/{id}(id=${std.id})}"> Naikinti</a>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

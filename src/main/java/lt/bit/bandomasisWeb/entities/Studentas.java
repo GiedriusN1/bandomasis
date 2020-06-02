@@ -1,15 +1,7 @@
-package lt.bit.bandomasis.entities;
-
-import lt.bit.bandomasis.repositories.StudentasRepository;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+package lt.bit.bandomasisWeb.entities;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 @Entity
 @Table(name = "studentai")

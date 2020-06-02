@@ -1,4 +1,4 @@
-package lt.bit.bandomasis;
+package lt.bit.bandomasisWeb;
 
 
 /*
@@ -26,7 +26,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories
-public class BandomasisApplication {
+public class BandomasisApplicationWeb {
 
 	/**
 	 * Pagrindinė vykdomoji klasė
@@ -34,13 +34,7 @@ public class BandomasisApplication {
 	 */
 
 	public static void main(String[] args) {
-		SpringApplication.run(BandomasisApplication.class, args);
-
-// nesiderina su Spring karkaso struktura, bet 3 uzduociai reikia statinio metodo:
-
-
-
+		SpringApplication.run(BandomasisApplicationWeb.class, args);
 
 	}
-
 }

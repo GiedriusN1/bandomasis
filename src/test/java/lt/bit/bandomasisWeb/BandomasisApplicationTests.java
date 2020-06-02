@@ -1,4 +1,4 @@
-package lt.bit.bandomasis;
+package lt.bit.bandomasisWeb;
 
 //import org.junit.Test;
 

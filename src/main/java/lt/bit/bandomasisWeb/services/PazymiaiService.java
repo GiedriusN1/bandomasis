@@ -1,14 +1,10 @@
-package lt.bit.bandomasis.services;
+package lt.bit.bandomasisWeb.services;
 
-import com.sun.jdi.IntegerValue;
-import com.sun.jdi.Type;
-import com.sun.jdi.VirtualMachine;
-import lt.bit.bandomasis.entities.Pazymiai;
-import lt.bit.bandomasis.repositories.PazymiaiRepository;
+import lt.bit.bandomasisWeb.entities.Pazymiai;
+import lt.bit.bandomasisWeb.repositories.PazymiaiRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.aspectj.runtime.internal.Conversions.intValue;

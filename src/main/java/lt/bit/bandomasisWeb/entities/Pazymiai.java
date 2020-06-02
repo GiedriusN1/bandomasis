@@ -1,4 +1,4 @@
-package lt.bit.bandomasis.entities;
+package lt.bit.bandomasisWeb.entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;

@@ -1,12 +1,9 @@
-package lt.bit.bandomasis.repositories;
+package lt.bit.bandomasisWeb.repositories;
 
-import lt.bit.bandomasis.entities.Pazymiai;
-import lt.bit.bandomasis.entities.Studentas;
+import lt.bit.bandomasisWeb.entities.Studentas;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.annotation.Resource;
 import java.util.List;
-import java.util.Optional;
 
 public interface StudentasRepository extends JpaRepository<Studentas, Integer> {
 

@@ -1,18 +1,12 @@
-package lt.bit.bandomasis.runners;
-import lt.bit.bandomasis.entities.Pazymiai;
-import lt.bit.bandomasis.entities.Studentas;
-import lt.bit.bandomasis.repositories.StudentasRepository;
-import lt.bit.bandomasis.services.StudentasService;
-import net.bytebuddy.dynamic.DynamicType;
+package lt.bit.bandomasisWeb.runners;
+import lt.bit.bandomasisWeb.entities.Studentas;
+import lt.bit.bandomasisWeb.repositories.StudentasRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.data.domain.Sort;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 

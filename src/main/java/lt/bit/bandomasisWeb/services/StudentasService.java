@@ -1,18 +1,13 @@
-package lt.bit.bandomasis.services;
+package lt.bit.bandomasisWeb.services;
 
-import lt.bit.bandomasis.entities.Studentas;
-import lt.bit.bandomasis.repositories.StudentasRepository;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import lt.bit.bandomasisWeb.entities.Studentas;
+import lt.bit.bandomasisWeb.repositories.StudentasRepository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class StudentasService {
